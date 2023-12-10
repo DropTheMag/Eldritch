@@ -8,14 +8,14 @@
 script = ExtResource("1_hbksw")
 
 [node name="Character" type="Sprite2D" parent="."]
-z_index = 2
+z_index = 3
 texture = ExtResource("1_g3o0t")
 
 [node name="Sword" type="Sprite2D" parent="."]
-z_index = 1
+z_index = 2
 position = Vector2(-19, -3)
 rotation = -1.11307
 texture = ExtResource("2_iwb0i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.67, 2.67)
+zoom = Vector2(2.2, 2.2)
