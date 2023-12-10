@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cynd4bs1qfm7s"]
 
-[ext_resource type="Texture2D" uid="uid://cq4ackexjww5c" path="res://Tilemap/Tilemap.png" id="1_2vmx4"]
-[ext_resource type="PackedScene" uid="uid://5v7eku1ehhaw" path="res://EldritchPlayer.tscn" id="2_px7se"]
+[ext_resource type="Texture2D" uid="uid://cq4ackexjww5c" path="res://Tilemap/Tilemap.png" id="1_ykda0"]
+[ext_resource type="PackedScene" uid="uid://5v7eku1ehhaw" path="res://EldritchPlayer.tscn" id="2_i5y61"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsugh"]
-texture = ExtResource("1_2vmx4")
+texture = ExtResource("1_ykda0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -95,7 +95,7 @@ physics_layer_0/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_qsugh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sccwt"]
-texture = ExtResource("1_2vmx4")
+texture = ExtResource("1_ykda0")
 texture_region_size = Vector2i(32, 32)
 7:0/0 = 0
 8:0/0 = 0
@@ -124,7 +124,7 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_sccwt")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1e54"]
-texture = ExtResource("1_2vmx4")
+texture = ExtResource("1_ykda0")
 texture_region_size = Vector2i(32, 32)
 3:0/0 = 0
 4:0/0 = 0
@@ -176,5 +176,5 @@ tile_set = SubResource("TileSet_aubq3")
 format = 2
 layer_0/tile_data = PackedInt32Array(65552, 917504, 2)
 
-[node name="Player" parent="." instance=ExtResource("2_px7se")]
+[node name="Player" parent="." instance=ExtResource("2_i5y61")]
 position = Vector2(338, 174)
