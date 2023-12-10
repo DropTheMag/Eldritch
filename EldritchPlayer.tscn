@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://5v7eku1ehhaw"]
+
+[ext_resource type="Texture2D" uid="uid://bi8ue4vbablpy" path="res://Sprite-0002.png" id="1_g3o0t"]
+[ext_resource type="Texture2D" uid="uid://bqb8hjbijtap6" path="res://Sword.png" id="2_iwb0i"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Character" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("1_g3o0t")
+
+[node name="Sword" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-19, -3)
+rotation = -1.11307
+texture = ExtResource("2_iwb0i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.67, 2.67)
