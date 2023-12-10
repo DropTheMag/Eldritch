@@ -104,6 +104,9 @@ texture_region_size = Vector2i(32, 32)
 9:3/0 = 0
 3:3/0 = 0
 3:4/0 = 0
+8:6/0 = 0
+7:6/0 = 0
+6:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_aubq3"]
 tile_size = Vector2i(32, 32)
@@ -133,7 +136,7 @@ layer_0/tile_data = PackedInt32Array(131084, 196608, 805306372, 524300, 196608, 
 z_index = 4
 tile_set = SubResource("TileSet_aubq3")
 format = 2
-layer_0/tile_data = PackedInt32Array(65552, 917504, 2, 655373, 589824, 4, 655374, 589824, 4, 655375, 589824, 4, 655376, 589824, 4, 655377, 589824, 4, 655378, 589824, 4, 655379, 589824, 4, 524312, 917504, 2, 524318, 917504, 2)
+layer_0/tile_data = PackedInt32Array(65552, 917504, 2, 524312, 917504, 2, 524318, 917504, 2, 851981, 393216, 6, 851982, 458752, 6, 851983, 458752, 6, 851984, 458752, 6, 851985, 458752, 6, 851986, 458752, 6, 851987, 524288, 6)
 
 [node name="Player" parent="." instance=ExtResource("2_i5y61")]
 position = Vector2(338, 174)
