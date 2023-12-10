@@ -1,6 +1,6 @@
-extends Sprite2D
+extends Node2D
 
-var speed = 100
+var speed = 125
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
