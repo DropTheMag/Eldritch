@@ -16,3 +16,7 @@ func _process(delta):
 		direction.y -= 1
 
 	position += direction.normalized() * speed * delta
+
+
+func _on_area_2d_area_entered(area):
+	print("collided")
