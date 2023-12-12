@@ -1,19 +1,21 @@
 extends CharacterBody2D
 
-const SPEED = 150.0
+const SPEED = 100
 
 func _physics_process(delta):
 	
-	var HDirection = Input.get_axis("ui_left", "ui_right")
-	var VDirection = Input.get_axis("ui_up", "ui_down")
+	var HDirection = Input.get_axis("ui_left", "ui_right") * SPEED
+	var VDirection = Input.get_axis("ui_up", "ui_down") * SPEED
 	
-	if HDirection:
-		velocity.x = HDirection * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if VDirection:
-		velocity.y = VDirection * SPEED
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+	velocity = Vector2(HDirection, VDirection)
 
-	move_and_slide()
+	var collision_info = move_and_collide(velocity * delta)
+
+	if collision_info:
+		var collider = collision_info.get_collider()
+		if collider and collider.is_in_group("HelperBot") and not GV.gui_is_on_screen:
+			var ui_scene = preload("res://UI/HelperBotTestUI.tscn")
+			var ui_scene_instance = ui_scene.instantiate()
+			add_child(ui_scene_instance)
+			GV.gui_is_on_screen = true
+			print("Collided with HelperBot!")

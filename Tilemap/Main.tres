@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bocpvgfmrfri3"]
 
-[ext_resource type="Texture2D" uid="uid://cq4ackexjww5c" path="res://Tilemap/Tilemap.png" id="1_e8sbk"]
+[ext_resource type="Texture2D" uid="uid://cq4ackexjww5c" path="res://Tilemap/Tilemap.png" id="1_gapq1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qsugh"]
-texture = ExtResource("1_e8sbk")
+texture = ExtResource("1_gapq1")
 texture_region_size = Vector2i(32, 32)
 10:0/0 = 0
 10:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -395,5 +395,5 @@ texture_region_size = Vector2i(32, 32)
 
 [resource]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 2
+physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_qsugh")
