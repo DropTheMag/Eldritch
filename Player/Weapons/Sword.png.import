@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddh2ngjd74emw"
-path="res://.godot/imported/HelperBot.png-6dd5038f4a1e27e8bb3ce5da86c0d104.ctex"
+uid="uid://bqb8hjbijtap6"
+path="res://.godot/imported/Sword.png-b0d5e5642eddc17ad66937a0c8422b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HelperBot.png"
-dest_files=["res://.godot/imported/HelperBot.png-6dd5038f4a1e27e8bb3ce5da86c0d104.ctex"]
+source_file="res://Player/Weapons/Sword.png"
+dest_files=["res://.godot/imported/Sword.png-b0d5e5642eddc17ad66937a0c8422b6e.ctex"]
 
 [params]
 

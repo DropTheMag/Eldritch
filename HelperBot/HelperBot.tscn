@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dltoj1o0kuimw"]
+
+[ext_resource type="Texture2D" uid="uid://ddh2ngjd74emw" path="res://HelperBot/HelperBot.png" id="1_v0vdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2wlt"]
+size = Vector2(26, 28)
+
+[node name="HelperBot" type="Node2D"]
+
+[node name="HelperBot" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_v0vdj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -14)
+shape = SubResource("RectangleShape2D_t2wlt")
