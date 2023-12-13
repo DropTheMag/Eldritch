@@ -18,14 +18,13 @@ func _physics_process(delta):
 func _on_dialog_collision_tracker_body_entered(body):
 	if body.is_in_group("HelperBot"):
 		var DialogButton = get_node("DialogButton")
-		DialogButton.left_dialog_initiator = false
-		DialogButton.dialog_timer = GV.dialog_timer
 		DialogButton.text = body.dialog_sequence[randi_range(0, body.dialog_sequence.size() - 1)]
 		DialogButton.visible = true
+		DialogButton.reset_timer()
 		#GV.dialog_open = true
 
 # Check if the player is touching a dialog initiator, open dialog, if they leave, start the timer to remove the dialog.
 func _on_dialog_collision_tracker_body_exited(body):
 	if body.is_in_group("HelperBot"):
 		get_node("DialogButton").dialog_timer = GV.dialog_timer
-		get_node("DialogButton").left_dialog_initiator = true
+		get_node("DialogButton").timer_running = true
