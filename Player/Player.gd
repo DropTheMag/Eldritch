@@ -15,6 +15,7 @@ func _physics_process(delta):
 	# Move player and grab collider info
 	var collision_info = move_and_collide(Vector2(HDirection, VDirection) * delta)
 
+# Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running).
 func _on_dialog_collision_tracker_body_entered(body):
 	if body.is_in_group("HelperBot"):
 		var DialogButton = get_node("DialogButton")
@@ -23,7 +24,7 @@ func _on_dialog_collision_tracker_body_entered(body):
 		DialogButton.reset_timer()
 		#GV.dialog_open = true
 
-# Check if the player is touching a dialog initiator, open dialog, if they leave, start the timer to remove the dialog.
+# Check if the player leaves a dialog initiator, if so, start dialog closing timer
 func _on_dialog_collision_tracker_body_exited(body):
 	if body.is_in_group("HelperBot"):
 		get_node("DialogButton").dialog_timer = GV.dialog_timer

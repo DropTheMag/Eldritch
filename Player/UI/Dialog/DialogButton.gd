@@ -17,11 +17,12 @@ func _process(delta):
 			reset_timer()
 			visible = false
 
-# When pressed, hide the button dialog and let the GV know it's closed
+# When pressed, hide the button dialog and reset the timer
 func _on_pressed():
 	reset_timer()
 	visible = false
 	
+# External function to reset the timer easily from anywhere
 func reset_timer():
 	timer_running = false
 	dialog_timer = GV.dialog_timer
