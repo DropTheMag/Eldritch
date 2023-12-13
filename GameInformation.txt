@@ -1,0 +1,6 @@
+Z-Index Reference Sheet (Y-Sort Enabled):
+	0 - Ground Layers
+	1 - Overlays
+	2 - Paths
+	3 - Fences, Buildings, Player, NPCs, Enemies, Projectiles, Farms, etc.
+	10 - UIs

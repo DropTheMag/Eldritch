@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cynd4bs1qfm7s"]
 
 [ext_resource type="TileSet" uid="uid://bocpvgfmrfri3" path="res://Tilemap/Main.tres" id="1_unfew"]
-[ext_resource type="PackedScene" uid="uid://5v7eku1ehhaw" path="res://Player/EldritchPlayer.tscn" id="2_wuddt"]
+[ext_resource type="PackedScene" uid="uid://5v7eku1ehhaw" path="res://Player/Player.tscn" id="2_wuddt"]
 [ext_resource type="PackedScene" uid="uid://dltoj1o0kuimw" path="res://HelperBot/HelperBot.tscn" id="3_0koev"]
 
 [node name="MainNode" type="Node2D"]
