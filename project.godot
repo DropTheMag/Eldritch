@@ -17,7 +17,7 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [autoload]
 
-GV="*res://Scripts/GlobalVariables.gd"
+GV="*res://Globals/GlobalVariables.gd"
 
 [input]
 
