@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://5v7eku1ehhaw"]
+[gd_scene load_steps=7 format=3 uid="uid://5v7eku1ehhaw"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_60eyx"]
 [ext_resource type="Texture2D" uid="uid://bi8ue4vbablpy" path="res://Player/Sprites/PlayerSprite.png" id="2_7jrwh"]
@@ -6,7 +6,10 @@
 [ext_resource type="Script" path="res://Player/UI/Dialog/DialogButton.gd" id="4_ibua3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3615"]
-size = Vector2(20, 6)
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_012nu"]
+size = Vector2(24, 12)
 
 [node name="Player" type="Node2D"]
 z_index = 3
@@ -21,8 +24,8 @@ script = ExtResource("1_60eyx")
 position = Vector2(0, -24)
 texture = ExtResource("2_7jrwh")
 
-[node name="Sword" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-19, -27)
+[node name="Sword" type="Sprite2D" parent="CharacterBody2D/Character"]
+position = Vector2(-19, -3)
 rotation = -1.11307
 texture = ExtResource("2_iwb0i")
 
@@ -31,7 +34,7 @@ position = Vector2(0, -24)
 zoom = Vector2(2.2, 2.2)
 
 [node name="WalkingCollision" type="CollisionShape2D" parent="CharacterBody2D" groups=["Player"]]
-position = Vector2(0, -3)
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_e3615")
 
 [node name="DialogButton" type="Button" parent="CharacterBody2D"]
@@ -45,4 +48,12 @@ pivot_offset = Vector2(-1, 0)
 text = "He has a mean look in his eyes..."
 script = ExtResource("4_ibua3")
 
+[node name="DialogCollisionTracker" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/DialogCollisionTracker"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_012nu")
+
 [connection signal="pressed" from="CharacterBody2D/DialogButton" to="CharacterBody2D/DialogButton" method="_on_pressed"]
+[connection signal="body_entered" from="CharacterBody2D/DialogCollisionTracker" to="CharacterBody2D" method="_on_dialog_collision_tracker_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/DialogCollisionTracker" to="CharacterBody2D" method="_on_dialog_collision_tracker_body_exited"]
