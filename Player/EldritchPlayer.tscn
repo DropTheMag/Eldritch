@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://5v7eku1ehhaw"]
+[gd_scene load_steps=6 format=3 uid="uid://5v7eku1ehhaw"]
 
 [ext_resource type="Script" path="res://Player/PlayerBody.gd" id="1_60eyx"]
 [ext_resource type="Texture2D" uid="uid://bqb8hjbijtap6" path="res://Player/Weapons/Sword.png" id="2_iwb0i"]
@@ -7,12 +7,26 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3615"]
 size = Vector2(20, 6)
 
+[sub_resource type="GDScript" id="GDScript_iojeq"]
+script/source = "extends Button
+
+# Hide the dialog box before initialization (allows it to still be viewed while editing)
+func _init():
+	visible = false
+
+# When pressed, hide the button dialog and let the GV know it's closed
+func _on_pressed():
+	visible = false
+	GV.dialog_open = false
+"
+
 [node name="Player" type="Node2D"]
 z_index = 3
 y_sort_enabled = true
 position = Vector2(0, 24)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+floor_max_angle = 0.0
 script = ExtResource("1_60eyx")
 
 [node name="Character" type="Sprite2D" parent="CharacterBody2D"]
@@ -31,3 +45,15 @@ zoom = Vector2(2.2, 2.2)
 [node name="WalkingCollision" type="CollisionShape2D" parent="CharacterBody2D" groups=["Player"]]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_e3615")
+
+[node name="DialogButton" type="Button" parent="CharacterBody2D"]
+offset_left = -250.0
+offset_top = 97.0
+offset_right = 750.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(-1, 0)
+text = "He has a mean look in his eyes..."
+script = SubResource("GDScript_iojeq")
+
+[connection signal="pressed" from="CharacterBody2D/DialogButton" to="CharacterBody2D/DialogButton" method="_on_pressed"]
