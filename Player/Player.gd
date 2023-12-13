@@ -19,9 +19,10 @@ func _physics_process(delta):
 	
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
 	if Input.is_action_just_pressed("ui_e"):
+		get_node("Player UI").update_health_bar()
 		var DialogueButton = get_node("DialogueButton")
-		if dialogue_initiator_collider:
-			DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialog_sequence)
+		if dialogue_initiator_collider.is_in_group("HelperBot"):
+			DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialogue_sequence)
 		else:
 			DialogueButton.close_dialogue()
 			DialogueButton.reset_dialogue_timer()
@@ -31,7 +32,7 @@ func _on_dialog_collision_tracker_body_entered(body):
 	dialogue_initiator_collider = body
 	var DialogueButton = get_node("DialogueButton")
 	if dialogue_initiator_collider.is_in_group("HelperBot"):
-		DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialog_sequence)
+		DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialogue_sequence)
 
 # Check if the player leaves a dialog initiator, if so, start dialog closing timer
 func _on_dialog_collision_tracker_body_exited(body):

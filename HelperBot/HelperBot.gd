@@ -1,6 +1,6 @@
 extends Node2D
 
-var dialog_sequence = ["There's something sinister about it.",
+var dialogue_sequence = ["There's something sinister about it.",
 "It stares into the distance, ignoring your presence.",
 "You step try to get close, it twitches, never losing its gaze on the horizon.",
 "You hear small buzzes and mechanical clicks from within its body, a constant drone of electricity.",
