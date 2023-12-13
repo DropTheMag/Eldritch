@@ -23,13 +23,13 @@ func _on_pressed():
 	visible = false
 
 # Show a specified dialogue string to the player through the dialogue system
-func show_dialogue(dialog):
-	text = dialog
+func show_dialogue(dialogue):
+	text = dialogue
 	visible = true
 	
 # Show a specified random dialogue from a string array to the player through the dialogue system
-func show_random_dialogue(dialog_list):
-	text = dialog_list[randi_range(0, dialog_list.size() - 1)]
+func show_random_dialogue(dialogue_list):
+	text = dialogue_list[randi_range(0, dialogue_list.size() - 1)]
 	visible = true
 	
 # Close the currently open dialogue.
@@ -47,4 +47,4 @@ func stop_dialogue_timer():
 # Reset the dialogue timer back to standard settings, choose to re-run the timer or stop it.
 func reset_dialogue_timer(start_timer: bool = false):
 	timer_running = start_timer
-	dialogue_timer = GV.dialog_timer
+	dialogue_timer = GV.standard_dialogue_timer_length
