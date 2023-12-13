@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 100
+var dialogue_initiator_collider = null
 
 func _physics_process(delta):
 	
@@ -14,18 +15,26 @@ func _physics_process(delta):
 	
 	# Move player and grab collider info
 	var collision_info = move_and_collide(Vector2(HDirection, VDirection) * delta)
+	
+	# Check if player presses "e" to advance, randomize, select, or close dialogue.
+	if Input.is_action_just_pressed("ui_e"):
+		var DialogueButton = get_node("DialogueButton")
+		if dialogue_initiator_collider:
+			DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialog_sequence)
+		else:
+			DialogueButton.close_dialogue()
+			DialogueButton.reset_dialogue_timer()
 
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running).
 func _on_dialog_collision_tracker_body_entered(body):
-	if body.is_in_group("HelperBot"):
-		var DialogButton = get_node("DialogButton")
-		DialogButton.text = body.dialog_sequence[randi_range(0, body.dialog_sequence.size() - 1)]
-		DialogButton.visible = true
-		DialogButton.reset_timer()
-		#GV.dialog_open = true
+	dialogue_initiator_collider = body
+	var DialogueButton = get_node("DialogueButton")
+	if dialogue_initiator_collider.is_in_group("HelperBot"):
+		DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialog_sequence)
 
 # Check if the player leaves a dialog initiator, if so, start dialog closing timer
 func _on_dialog_collision_tracker_body_exited(body):
-	if body.is_in_group("HelperBot"):
-		get_node("DialogButton").dialog_timer = GV.dialog_timer
-		get_node("DialogButton").timer_running = true
+	var DialogueButton = get_node("DialogueButton")
+	if dialogue_initiator_collider.is_in_group("HelperBot"):
+		DialogueButton.reset_dialogue_timer(true)
+	dialogue_initiator_collider = null
