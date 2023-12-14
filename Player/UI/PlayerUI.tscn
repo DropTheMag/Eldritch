@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://brjsruxnm5wbk"]
+
+[ext_resource type="Texture2D" uid="uid://cc80jsca65so0" path="res://User Interface/BarUnder.png" id="1_s7q5g"]
+[ext_resource type="Texture2D" uid="uid://da1tvwy1pxqak" path="res://User Interface/BarOver.png" id="2_0u580"]
+[ext_resource type="Texture2D" uid="uid://d1cjlmydvmurg" path="res://User Interface/HealthBar.png" id="3_vh5dh"]
+[ext_resource type="Texture2D" uid="uid://c0iqai5hd4n0m" path="res://User Interface/StaminaBar.png" id="4_wq4tc"]
+
+[node name="PlayerUI" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -138.0
+offset_bottom = 52.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+value = 100.0
+texture_under = ExtResource("1_s7q5g")
+texture_over = ExtResource("2_0u580")
+texture_progress = ExtResource("3_vh5dh")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+value = 100.0
+texture_under = ExtResource("1_s7q5g")
+texture_over = ExtResource("2_0u580")
+texture_progress = ExtResource("4_wq4tc")
+
+[node name="PlayerUI" type="Control" parent="."]
+visible = false
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

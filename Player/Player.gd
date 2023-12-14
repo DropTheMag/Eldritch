@@ -1,23 +1,30 @@
 extends Node2D
 
 # Player stats and variables
-@onready var player = $Body
+@onready var player_controller = $Controller
 var health = 100
 
-@onready var health_bar = $Body/PlayerUI/HealthBar
-@onready var character_sprite = $Body/Sprite
+# Preload and instantiate the PlayerUI scene and health_bar/stamina_bar to access and modify their values
+@onready var player_ui = preload("res://Player/UI/PlayerUI.tscn").instantiate()
+@onready var health_bar = player_ui.get_node("MarginContainer/VBoxContainer/HealthBar")
+@onready var stamina_bar = player_ui.get_node("MarginContainer/VBoxContainer/StaminaBar")
+
+@onready var character_sprite = $Controller/Sprite
 
 # Dialogue interaction variables
 var dialogue_initiator_collider = null
-@onready var dialogue_button = $Body/DialogueUI/DialogueButton
+@onready var dialogue_button = $Controller/DialogueButton
 
 # Respawn button
-@onready var respawn_button = $Body/RespawnButton
+@onready var respawn_button = $Controller/RespawnButton
 
-# Runs when the 
+# Runs when the node is added to the scene, before any other operations complete
 func _ready():
 	# Set player initial health value
 	health_bar.value = health
+	
+	# Adds the playerUI to the scene tree, displays independently of camera zoom--fixed to viewport
+	add_child(player_ui)
 
 # Called every physics frame to process movement and more
 func _physics_process(delta):
@@ -25,7 +32,7 @@ func _physics_process(delta):
 	# Set health bar, monitor player health and perform functions on it.
 	health_bar.value = health
 	if health <=0:
-		player.can_move = false
+		player_controller.can_move = false
 		respawn_button.visible = true
 	
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
@@ -36,13 +43,6 @@ func _physics_process(delta):
 		else:
 			dialogue_button.close_dialogue()
 			dialogue_button.reset_dialogue_timer()
-
-# Respawn the player at location.
-func _on_respawn_button_pressed():
-	respawn_button.visible = false
-	position = Vector2()
-	health = 100
-	player.can_move = true
 	
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running)
 func _on_dialog_collision_tracker_body_entered(body):

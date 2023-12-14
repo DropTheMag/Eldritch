@@ -8,14 +8,14 @@ var player:CharacterBody2D = null
 func _process(delta):
 	if player_in_spikes:
 		if not hit_at_start:
-			player.health -= 20
+			player.get_parent().health -= 20
 			hit_at_start = true
 		if time_between_hits > 0:
 			time_between_hits -= delta
 		else:
 			if player.is_in_group("Player"):
 				time_between_hits = 0.5
-				player.health -=20
+				player.get_parent().health -=20
 			
 func _on_body_entered(body):
 	player = body
