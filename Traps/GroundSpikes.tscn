@@ -21,3 +21,4 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_y7dtu")
 
 [connection signal="body_entered" from="GroundsSpikesCollision" to="GroundsSpikesCollision" method="_on_body_entered"]
+[connection signal="body_exited" from="GroundsSpikesCollision" to="GroundsSpikesCollision" method="_on_body_exited"]

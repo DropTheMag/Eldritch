@@ -94,6 +94,15 @@ pivot_offset = Vector2(-1, 0)
 text = "He has a mean look in his eyes..."
 script = ExtResource("4_vct17")
 
+[node name="RespawnButton" type="Button" parent="CharacterBody2D"]
+visible = false
+offset_left = -97.0
+offset_top = 58.0
+offset_right = 91.0
+offset_bottom = 89.0
+text = "You died, lol. Respawn?"
+
 [connection signal="body_entered" from="CharacterBody2D/DialogueCollisionTracker" to="CharacterBody2D" method="_on_dialog_collision_tracker_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/DialogueCollisionTracker" to="CharacterBody2D" method="_on_dialog_collision_tracker_body_exited"]
 [connection signal="pressed" from="CharacterBody2D/DialogueUI/DialogueButton" to="CharacterBody2D/DialogueUI/DialogueButton" method="_on_pressed"]
+[connection signal="pressed" from="CharacterBody2D/RespawnButton" to="CharacterBody2D" method="_on_respawn_button_pressed"]
