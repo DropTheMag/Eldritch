@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxkuxit1kw1or"
-path="res://.godot/imported/GroundSpikes.png-a3bf3b72018fd2763e854bd2e620834a.ctex"
+path="res://.godot/imported/GroundSpikes.png-2817247bd39e43699bac24c4c716b66d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GroundSpikes.png"
-dest_files=["res://.godot/imported/GroundSpikes.png-a3bf3b72018fd2763e854bd2e620834a.ctex"]
+source_file="res://Traps/GroundSpikes.png"
+dest_files=["res://.godot/imported/GroundSpikes.png-2817247bd39e43699bac24c4c716b66d.ctex"]
 
 [params]
 

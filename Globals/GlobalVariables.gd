@@ -10,5 +10,5 @@ var standard_dialogue_timer_length = 2
 
 # Initialize player's base health
 var health = 100
-	#input.
+	
 

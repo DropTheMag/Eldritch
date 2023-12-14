@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ldt8v3fn4e8h"]
+
+[ext_resource type="Texture2D" uid="uid://bxkuxit1kw1or" path="res://Traps/GroundSpikes.png" id="1_5g4wk"]
+[ext_resource type="Script" path="res://Traps/GroundSpikes.gd" id="2_kiw7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7dtu"]
+size = Vector2(30, 31)
+
+[node name="GroundSpikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5g4wk")
+
+[node name="GroundsSpikesCollision" type="Area2D" parent="."]
+script = ExtResource("2_kiw7f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundsSpikesCollision"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_y7dtu")
+
+[connection signal="body_entered" from="GroundsSpikesCollision" to="GroundsSpikesCollision" method="_on_body_entered"]
