@@ -26,8 +26,7 @@ func _ready():
 	# Adds the playerUI to the scene tree, displays independently of camera zoom--fixed to viewport
 	add_child(player_ui)
 
-# Called every physics frame to process movement and more
-func _physics_process(delta):
+func _process(delta):
 	
 	# Set health bar, monitor player health and perform functions on it.
 	health_bar.value = health

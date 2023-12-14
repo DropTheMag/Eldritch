@@ -67,6 +67,6 @@ position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_e3615")
 
 [connection signal="pressed" from="Controller/DialogueButton" to="Controller/DialogueButton" method="_on_pressed"]
-[connection signal="body_entered" from="Controller/DialogueCollisionArea" to="Controller" method="_on_dialog_collision_tracker_body_entered"]
-[connection signal="body_exited" from="Controller/DialogueCollisionArea" to="Controller" method="_on_dialog_collision_tracker_body_exited"]
+[connection signal="body_entered" from="Controller/DialogueCollisionArea" to="." method="_on_dialog_collision_tracker_body_entered"]
+[connection signal="body_exited" from="Controller/DialogueCollisionArea" to="." method="_on_dialog_collision_tracker_body_exited"]
 [connection signal="pressed" from="Controller/RespawnButton" to="Controller/RespawnButton" method="_on_pressed"]
