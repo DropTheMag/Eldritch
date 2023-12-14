@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc80jsca65so0"
-path="res://.godot/imported/Health Bar Under.png-8da720352e463af3c81fb76320cfca32.ctex"
+uid="uid://c0iqai5hd4n0m"
+path="res://.godot/imported/StaminaBar.png-5166106e5dcb33b1dd76c9da7ccbd8fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://User Interface/Health Bar Under.png"
-dest_files=["res://.godot/imported/Health Bar Under.png-8da720352e463af3c81fb76320cfca32.ctex"]
+source_file="res://User Interface/StaminaBar.png"
+dest_files=["res://.godot/imported/StaminaBar.png-5166106e5dcb33b1dd76c9da7ccbd8fe.ctex"]
 
 [params]
 

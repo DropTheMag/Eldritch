@@ -5,17 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://bqb8hjbijtap6" path="res://Player/Weapons/Sword.png" id="2_iwb0i"]
 [ext_resource type="Script" path="res://User Interface/PlayerUI.gd" id="4_3fkab"]
 [ext_resource type="Script" path="res://Player/UI/Dialog/DialogueButton.gd" id="4_vct17"]
-[ext_resource type="Texture2D" uid="uid://cc80jsca65so0" path="res://User Interface/Health Bar Under.png" id="5_70yg7"]
-[ext_resource type="Texture2D" uid="uid://da1tvwy1pxqak" path="res://User Interface/Health Bar Over.png" id="6_nv1ge"]
-[ext_resource type="Texture2D" uid="uid://d1cjlmydvmurg" path="res://User Interface/Health Bar.png" id="7_232n3"]
+[ext_resource type="Texture2D" uid="uid://cc80jsca65so0" path="res://User Interface/BarUnder.png" id="5_70yg7"]
+[ext_resource type="Texture2D" uid="uid://da1tvwy1pxqak" path="res://User Interface/BarOver.png" id="6_nv1ge"]
+[ext_resource type="Texture2D" uid="uid://d1cjlmydvmurg" path="res://User Interface/HealthBar.png" id="7_232n3"]
+[ext_resource type="Texture2D" uid="uid://c0iqai5hd4n0m" path="res://User Interface/StaminaBar.png" id="8_wm78e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3615"]
 size = Vector2(20, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_012nu"]
 size = Vector2(24, 12)
-
-[sub_resource type="Theme" id="Theme_e7sd2"]
 
 [node name="Player" type="Node2D"]
 z_index = 3
@@ -39,6 +38,40 @@ texture = ExtResource("2_iwb0i")
 position = Vector2(0, -24)
 zoom = Vector2(2.2, 2.2)
 
+[node name="Player UI" type="Node2D" parent="CharacterBody2D/Camera2D"]
+position = Vector2(0, 24)
+script = ExtResource("4_3fkab")
+
+[node name="HealthBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D/Player UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 131.0
+offset_top = -168.0
+offset_right = 259.0
+offset_bottom = -152.0
+grow_horizontal = 0
+size_flags_vertical = 0
+value = 78.0
+texture_under = ExtResource("5_70yg7")
+texture_over = ExtResource("6_nv1ge")
+texture_progress = ExtResource("7_232n3")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D/Player UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 131.0
+offset_top = -150.0
+offset_right = 259.0
+offset_bottom = -134.0
+grow_horizontal = 0
+size_flags_vertical = 0
+value = 42.0
+texture_under = ExtResource("5_70yg7")
+texture_over = ExtResource("6_nv1ge")
+texture_progress = ExtResource("8_wm78e")
+
 [node name="WalkingCollision" type="CollisionShape2D" parent="CharacterBody2D" groups=["Player"]]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_e3615")
@@ -48,31 +81,6 @@ shape = SubResource("RectangleShape2D_e3615")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/DialogueCollisionTracker"]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_012nu")
-
-[node name="Player UI" type="Node2D" parent="CharacterBody2D"]
-script = ExtResource("4_3fkab")
-
-[node name="HealthBarTextured" type="TextureProgressBar" parent="CharacterBody2D/Player UI"]
-visible = false
-offset_left = 122.0
-offset_top = -159.0
-offset_right = 250.0
-offset_bottom = -127.0
-scale = Vector2(1, 0.399999)
-value = 20.0
-texture_under = ExtResource("5_70yg7")
-texture_over = ExtResource("6_nv1ge")
-texture_progress = ExtResource("7_232n3")
-
-[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D/Player UI"]
-modulate = Color(1, 0, 0, 1)
-offset_left = 127.0
-offset_top = -161.0
-offset_right = 252.0
-offset_bottom = -146.0
-theme = SubResource("Theme_e7sd2")
-value = 20.0
-show_percentage = false
 
 [node name="Dialogue UI" type="Node2D" parent="CharacterBody2D"]
 
