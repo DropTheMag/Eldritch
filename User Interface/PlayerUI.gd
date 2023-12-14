@@ -1,7 +1,9 @@
 extends Node2D
 
-@onready var health: TextureProgressBar = $MarginContainer/HealthBar
+#@onready var health: TextureProgressBar = $MarginContainer/HealthBar
  
 func update_health_bar():
-	var health_bar:ProgressBar = get_node("HealthBar")
-	health_bar.value = randi_range(0, 100)
+	var HealthBar:TextureProgressBar = $HealthBar
+	var StaminaBar:TextureProgressBar = $StaminaBar
+	HealthBar.value = randi_range(0, 100)
+	StaminaBar.value = randi_range(0, 100)

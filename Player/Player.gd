@@ -19,10 +19,11 @@ func _physics_process(delta):
 	
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
 	if Input.is_action_just_pressed("ui_e"):
-		get_node("Player UI").update_health_bar()
-		var DialogueButton = get_node("DialogueButton")
-		if dialogue_initiator_collider.is_in_group("HelperBot"):
-			DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialogue_sequence)
+		get_node("Camera2D/PlayerUI").update_health_bar()
+		var DialogueButton = $DialogueUI/DialogueButton
+		if dialogue_initiator_collider:
+			if dialogue_initiator_collider.is_in_group("HelperBot"):
+				DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialogue_sequence)
 		else:
 			DialogueButton.close_dialogue()
 			DialogueButton.reset_dialogue_timer()
@@ -30,13 +31,14 @@ func _physics_process(delta):
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running)
 func _on_dialog_collision_tracker_body_entered(body):
 	dialogue_initiator_collider = body
-	var DialogueButton = get_node("DialogueButton")
+	var DialogueButton = $DialogueUI/DialogueButton
 	if dialogue_initiator_collider.is_in_group("HelperBot"):
+		DialogueButton.reset_dialogue_timer()
 		DialogueButton.show_random_dialogue(dialogue_initiator_collider.dialogue_sequence)
 
 # Check if the player leaves a dialog initiator, if so, start dialog closing timer
 func _on_dialog_collision_tracker_body_exited(body):
-	var DialogueButton = get_node("DialogueButton")
+	var DialogueButton = $DialogueUI/DialogueButton
 	if dialogue_initiator_collider.is_in_group("HelperBot"):
 		DialogueButton.reset_dialogue_timer(true)
 	dialogue_initiator_collider = null

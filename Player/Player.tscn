@@ -38,11 +38,11 @@ texture = ExtResource("2_iwb0i")
 position = Vector2(0, -24)
 zoom = Vector2(2.2, 2.2)
 
-[node name="Player UI" type="Node2D" parent="CharacterBody2D/Camera2D"]
+[node name="PlayerUI" type="Node2D" parent="CharacterBody2D/Camera2D"]
 position = Vector2(0, 24)
 script = ExtResource("4_3fkab")
 
-[node name="HealthBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D/Player UI"]
+[node name="HealthBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D/PlayerUI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -57,7 +57,7 @@ texture_under = ExtResource("5_70yg7")
 texture_over = ExtResource("6_nv1ge")
 texture_progress = ExtResource("7_232n3")
 
-[node name="StaminaBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D/Player UI"]
+[node name="StaminaBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D/PlayerUI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -82,9 +82,9 @@ shape = SubResource("RectangleShape2D_e3615")
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_012nu")
 
-[node name="Dialogue UI" type="Node2D" parent="CharacterBody2D"]
+[node name="DialogueUI" type="Node2D" parent="CharacterBody2D"]
 
-[node name="DialogueButton" type="Button" parent="CharacterBody2D/Dialogue UI"]
+[node name="DialogueButton" type="Button" parent="CharacterBody2D/DialogueUI"]
 z_index = 10
 offset_left = -250.5
 offset_top = 97.0
@@ -97,4 +97,4 @@ script = ExtResource("4_vct17")
 
 [connection signal="body_entered" from="CharacterBody2D/DialogueCollisionTracker" to="CharacterBody2D" method="_on_dialog_collision_tracker_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/DialogueCollisionTracker" to="CharacterBody2D" method="_on_dialog_collision_tracker_body_exited"]
-[connection signal="pressed" from="CharacterBody2D/Dialogue UI/DialogueButton" to="CharacterBody2D/Dialogue UI/DialogueButton" method="_on_pressed"]
+[connection signal="pressed" from="CharacterBody2D/DialogueUI/DialogueButton" to="CharacterBody2D/DialogueUI/DialogueButton" method="_on_pressed"]
