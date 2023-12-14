@@ -59,6 +59,7 @@ func _on_dialog_collision_tracker_body_entered(body):
 # Check if the player leaves a dialog initiator, if so, start dialog closing timer
 func _on_dialog_collision_tracker_body_exited(body):
 	var DialogueButton = $DialogueUI/DialogueButton
-	if dialogue_initiator_collider.is_in_group("HelperBot"):
-		DialogueButton.reset_dialogue_timer(true)
-	dialogue_initiator_collider = null
+	if dialogue_initiator_collider:
+		if dialogue_initiator_collider.is_in_group("HelperBot"):
+			DialogueButton.reset_dialogue_timer(true)
+		dialogue_initiator_collider = null

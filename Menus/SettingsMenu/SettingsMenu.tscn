@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc1xoxtr3v3ak"]
+
+[ext_resource type="Script" path="res://Menus/SettingsMenu/SettingsMenu.gd" id="1_dkqne"]
+[ext_resource type="Texture2D" uid="uid://bo6uh4pklrhnx" path="res://Menus/MainMenu/MainMenuBackground.jpg" id="2_j2uid"]
+[ext_resource type="Texture2D" uid="uid://lqyv6vtri1j0" path="res://Menus/MainMenu/EldritchLogoTemp2.png" id="3_0duk3"]
+
+[sub_resource type="SystemFont" id="SystemFont_w0pjy"]
+font_names = PackedStringArray("Georgia")
+
+[sub_resource type="SystemFont" id="SystemFont_kramt"]
+font_names = PackedStringArray("SimSun")
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dkqne")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Sprite2D2" type="Sprite2D" parent="BoxContainer"]
+scale = Vector2(1.25584, 1.10801)
+texture = ExtResource("2_j2uid")
+
+[node name="Sprite2D" type="Sprite2D" parent="BoxContainer"]
+texture = ExtResource("3_0duk3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -139.0
+offset_right = 103.0
+grow_vertical = 0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="SettingsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_w0pjy")
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="AudioButon" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kramt")
+theme_override_font_sizes/font_size = 27
+text = "Audio"
+
+[node name="GraphicsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kramt")
+theme_override_font_sizes/font_size = 27
+text = "Graphics"
+
+[node name="GameplayButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kramt")
+theme_override_font_sizes/font_size = 27
+text = "Gameplay"
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_kramt")
+theme_override_font_sizes/font_size = 27
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

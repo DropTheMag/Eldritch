@@ -15,6 +15,6 @@ var dialogue_sequence = ["There's something sinister about it.",
 "A faint static fills the air, echoing an uneasy ambience through the cracks of your mind.",
 "As much as you want to get closer, you can't bring yourself to do so.",
 "Its gaze holds the weight of forgotten memories and a past long gone. You ponder who and what it is.",
-"The flickering lights from within its body cast eerie shows upon the ground.",
+"The flickering lights from within its body cast eerie shadows upon the ground.",
 "The air grows colder the longer you stay.",
 "You think you can hear occasional whispers echoing through its body."]

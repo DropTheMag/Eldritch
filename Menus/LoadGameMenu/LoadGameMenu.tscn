@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://1myb2kbncmos"]
+
+[node name="LoadGameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(125, 200)
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 1"
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 2"
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 3"
+
+[node name="Button4" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 1"
+
+[node name="Button5" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 2"
+
+[node name="Button6" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 3"
+
+[node name="Button7" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 1"
+
+[node name="Button8" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 2"
+
+[node name="Button9" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 3"
+
+[node name="Button10" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 1"
+
+[node name="Button11" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 2"
+
+[node name="Button12" type="Button" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Load Save 3"
