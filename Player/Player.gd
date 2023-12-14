@@ -19,7 +19,7 @@ func _physics_process(delta):
 	
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
 	if Input.is_action_just_pressed("ui_e"):
-		get_node("Camera2D/PlayerUI").update_health_bar()
+		get_node("PlayerUI").update_health_bar()
 		var DialogueButton = $DialogueUI/DialogueButton
 		if dialogue_initiator_collider:
 			if dialogue_initiator_collider.is_in_group("HelperBot"):

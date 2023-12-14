@@ -7,6 +7,8 @@
 size = Vector2(30, 31)
 
 [node name="GroundSpikes" type="Node2D"]
+z_index = 3
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5g4wk")
