@@ -36,3 +36,8 @@ value = 100.0
 texture_under = ExtResource("1_s7q5g")
 texture_over = ExtResource("2_0u580")
 texture_progress = ExtResource("4_wq4tc")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SHIFT to SPRINT!"
+horizontal_alignment = 1
