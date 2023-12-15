@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://5v7eku1ehhaw"]
+[gd_scene load_steps=8 format=3 uid="uid://5v7eku1ehhaw"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_60eyx"]
 [ext_resource type="Script" path="res://Player/PlayerController.gd" id="2_4u0yv"]
 [ext_resource type="Texture2D" uid="uid://bi8ue4vbablpy" path="res://Player/Sprites/PlayerSprite.png" id="2_7jrwh"]
 [ext_resource type="Texture2D" uid="uid://bqb8hjbijtap6" path="res://Player/Weapons/Sword.png" id="2_iwb0i"]
-[ext_resource type="Script" path="res://Player/UI/Dialog/DialogueButton.gd" id="4_vct17"]
 [ext_resource type="Script" path="res://Player/RespawnButton.gd" id="11_hrojc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_012nu"]
@@ -36,17 +35,6 @@ position = Vector2(-19, -3)
 rotation = -1.11307
 texture = ExtResource("2_iwb0i")
 
-[node name="DialogueButton" type="Button" parent="Controller"]
-z_index = 10
-offset_left = -251.0
-offset_top = 97.0
-offset_right = 749.0
-offset_bottom = 128.0
-scale = Vector2(0.5, 0.5)
-pivot_offset = Vector2(-1, 0)
-text = "He has a mean look in his eyes..."
-script = ExtResource("4_vct17")
-
 [node name="DialogueCollisionArea" type="Area2D" parent="Controller"]
 
 [node name="DialogueCollisionShape" type="CollisionShape2D" parent="Controller/DialogueCollisionArea"]
@@ -66,7 +54,6 @@ script = ExtResource("11_hrojc")
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_e3615")
 
-[connection signal="pressed" from="Controller/DialogueButton" to="Controller/DialogueButton" method="_on_pressed"]
 [connection signal="body_entered" from="Controller/DialogueCollisionArea" to="." method="_on_dialog_collision_tracker_body_entered"]
 [connection signal="body_exited" from="Controller/DialogueCollisionArea" to="." method="_on_dialog_collision_tracker_body_exited"]
 [connection signal="pressed" from="Controller/RespawnButton" to="Controller/RespawnButton" method="_on_pressed"]
