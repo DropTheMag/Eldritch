@@ -44,7 +44,8 @@ func _process(delta):
 			dialogue_ui.close_dialogue()
 			dialogue_ui.reset_dialogue_timer()
 			
-	if Input.is_action_just_pressed("shift"):
+	# Kill player test
+	if Input.is_action_just_pressed("k"):
 		health = 0
 	
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running)
