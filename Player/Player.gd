@@ -34,6 +34,9 @@ func _process(delta):
 	if health <=0:
 		player_controller.can_move = false
 		respawn_ui.visible = true
+		var testanim:AnimationPlayer = respawn_ui.get_node("DeathLabel/DeathLabelScaleAnimation")
+		testanim.play("respawn_text_animation")
+		
 	
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
 	if Input.is_action_just_pressed("ui_e"):

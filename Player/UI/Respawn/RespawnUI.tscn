@@ -4,7 +4,8 @@
 
 [sub_resource type="Animation" id="Animation_628pp"]
 resource_name = "respawn_text_animation"
-length = 5.0
+length = 3.0
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -12,10 +13,10 @@ tracks/0/path = NodePath("DeathLabel:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
+"times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(2, 2)]
+"values": [Vector2(1, 1), Vector2(2.5, 2.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5x0i3"]
@@ -38,12 +39,12 @@ offset_right = 49.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
+scale = Vector2(2.5, 2.5)
 pivot_offset = Vector2(49.5, 11.5)
 text = "You died, lol.
 "
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DeathLabel"]
+[node name="DeathLabelScaleAnimation" type="AnimationPlayer" parent="DeathLabel"]
 root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_5x0i3")
