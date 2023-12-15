@@ -19,7 +19,7 @@ func _physics_process(delta):
 	# Disable player movement if required for specific events (death, dialogue, cutscene, etc.)
 	if can_move:
 		# Player sprint controller
-		if Input.is_action_pressed("shift"):
+		if Input.is_action_pressed("shift") and velocity:
 			if current_stamina > 0:
 				current_stamina -= stamina_depletion_rate
 				speed = default_speed * sprint_factor
