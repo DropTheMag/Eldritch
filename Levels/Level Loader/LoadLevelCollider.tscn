@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwkc2miga0tjl"]
+
+[ext_resource type="Script" path="res://Levels/Level Loader/LoadLevelCollider.gd" id="1_osbo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agx78"]
+
+[node name="LoadLevelCollider" type="Node2D"]
+z_index = 10
+y_sort_enabled = true
+script = ExtResource("1_osbo5")
+
+[node name="LoadLevelArea" type="Area2D" parent="."]
+
+[node name="LoadLevelColliderShape" type="CollisionShape2D" parent="LoadLevelArea"]
+shape = SubResource("RectangleShape2D_agx78")
+
+[connection signal="body_entered" from="LoadLevelArea" to="." method="_on_load_level_area_body_entered"]

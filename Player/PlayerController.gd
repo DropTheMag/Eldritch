@@ -44,4 +44,4 @@ func _physics_process(delta):
 
 		get_parent().stamina_bar.value = current_stamina
 		move_and_slide()
-		print(speed)
+

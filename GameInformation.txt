@@ -3,4 +3,4 @@ Z-Index Reference Sheet (Y-Sort Enabled):
 	1 - Overlays
 	2 - Paths
 	3 - Fences, Buildings, Player, NPCs, Enemies, Projectiles, Farms, etc.
-	10 - UIs
+	10 - UIs, Colliders (to see them in editor), ...
