@@ -4,6 +4,8 @@ extends Button
 var dialogue_timer = 0
 var timer_running = false
 
+var dialogue_disappear_time = 2 # in seconds
+
 # Hide the dialog box before initialization (allows it to still be viewed while editing)
 func _init():
 	visible = false
@@ -47,4 +49,4 @@ func stop_dialogue_timer():
 # Reset the dialogue timer back to standard settings, choose to re-run the timer or stop it.
 func reset_dialogue_timer(start_timer: bool = false):
 	timer_running = start_timer
-	dialogue_timer = GV.standard_dialogue_timer_length
+	dialogue_timer = dialogue_disappear_time

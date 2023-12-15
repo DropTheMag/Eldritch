@@ -29,11 +29,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="Sprite2D2" type="Sprite2D" parent="BoxContainer"]
+[node name="Backsplash" type="Sprite2D" parent="BoxContainer"]
 scale = Vector2(1.25584, 1.10801)
 texture = ExtResource("2_o7co4")
 
-[node name="Sprite2D" type="Sprite2D" parent="BoxContainer"]
+[node name="Logo" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(0, -23)
 texture = ExtResource("3_uidlp")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

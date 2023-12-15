@@ -13,7 +13,8 @@ var health = 100
 
 # Dialogue interaction variables
 var dialogue_initiator_collider = null
-@onready var dialogue_button = $Controller/DialogueButton
+@onready var dialogue_ui = preload("res://Player/UI/DialogueUI.tscn").instantiate()
+@onready var dialogue_button = dialogue_ui.get_node("DialogueButton")
 
 # Respawn button
 @onready var respawn_button = $Controller/RespawnButton
@@ -25,6 +26,9 @@ func _ready():
 	
 	# Adds the playerUI to the scene tree, displays independently of camera zoom--fixed to viewport
 	add_child(player_ui)
+	
+	# Adds the dialogueUI to the scene tree for later use
+	add_child(dialogue_ui)
 
 func _process(delta):
 	
