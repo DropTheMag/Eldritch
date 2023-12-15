@@ -1,16 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://5v7eku1ehhaw"]
+[gd_scene load_steps=7 format=3 uid="uid://5v7eku1ehhaw"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_60eyx"]
 [ext_resource type="Script" path="res://Player/PlayerController.gd" id="2_4u0yv"]
 [ext_resource type="Texture2D" uid="uid://bi8ue4vbablpy" path="res://Player/Sprites/PlayerSprite.png" id="2_7jrwh"]
 [ext_resource type="Texture2D" uid="uid://bqb8hjbijtap6" path="res://Player/Weapons/Sword.png" id="2_iwb0i"]
-[ext_resource type="Script" path="res://Player/RespawnButton.gd" id="11_hrojc"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_012nu"]
-size = Vector2(24, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3615"]
 size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_012nu"]
+size = Vector2(24, 12)
 
 [node name="Player" type="Node2D"]
 z_index = 3
@@ -35,25 +34,15 @@ position = Vector2(-19, -3)
 rotation = -1.11307
 texture = ExtResource("2_iwb0i")
 
+[node name="CollisionArea" type="CollisionShape2D" parent="Controller" groups=["Player"]]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_e3615")
+
 [node name="DialogueCollisionArea" type="Area2D" parent="Controller"]
 
 [node name="DialogueCollisionShape" type="CollisionShape2D" parent="Controller/DialogueCollisionArea"]
 position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_012nu")
 
-[node name="RespawnButton" type="Button" parent="Controller"]
-visible = false
-offset_left = -97.0
-offset_top = 58.0
-offset_right = 91.0
-offset_bottom = 89.0
-text = "You died, lol. Respawn?"
-script = ExtResource("11_hrojc")
-
-[node name="CollisionArea" type="CollisionShape2D" parent="Controller" groups=["Player"]]
-position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_e3615")
-
 [connection signal="body_entered" from="Controller/DialogueCollisionArea" to="." method="_on_dialog_collision_tracker_body_entered"]
 [connection signal="body_exited" from="Controller/DialogueCollisionArea" to="." method="_on_dialog_collision_tracker_body_exited"]
-[connection signal="pressed" from="Controller/RespawnButton" to="Controller/RespawnButton" method="_on_pressed"]

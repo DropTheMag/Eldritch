@@ -1,10 +1,12 @@
-extends Button
+extends CanvasLayer
 
 # Set how long the dialog stays open when the character leaves a dialog initiator
 var dialogue_timer = 0
 var timer_running = false
 
 var dialogue_disappear_time = 2 # in seconds
+
+@onready var dialogue_button = $DialogueButton
 
 # Hide the dialog box before initialization (allows it to still be viewed while editing)
 func _init():
@@ -26,12 +28,12 @@ func _on_pressed():
 
 # Show a specified dialogue string to the player through the dialogue system
 func show_dialogue(dialogue):
-	text = dialogue
+	dialogue_button.text = dialogue
 	visible = true
 	
 # Show a specified random dialogue from a string array to the player through the dialogue system
 func show_random_dialogue(dialogue_list):
-	text = dialogue_list[randi_range(0, dialogue_list.size() - 1)]
+	dialogue_button.text = dialogue_list[randi_range(0, dialogue_list.size() - 1)]
 	visible = true
 	
 # Close the currently open dialogue.

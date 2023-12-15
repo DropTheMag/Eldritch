@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://brjsruxnm5wbk"]
 
-[ext_resource type="Texture2D" uid="uid://cc80jsca65so0" path="res://User Interface/BarUnder.png" id="1_s7q5g"]
-[ext_resource type="Texture2D" uid="uid://da1tvwy1pxqak" path="res://User Interface/BarOver.png" id="2_0u580"]
-[ext_resource type="Texture2D" uid="uid://d1cjlmydvmurg" path="res://User Interface/HealthBar.png" id="3_vh5dh"]
-[ext_resource type="Texture2D" uid="uid://c0iqai5hd4n0m" path="res://User Interface/StaminaBar.png" id="4_wq4tc"]
+[ext_resource type="Texture2D" uid="uid://cc80jsca65so0" path="res://User Interface/BarUnder.png" id="1_8isxx"]
+[ext_resource type="Texture2D" uid="uid://da1tvwy1pxqak" path="res://User Interface/BarOver.png" id="2_00qt0"]
+[ext_resource type="Texture2D" uid="uid://d1cjlmydvmurg" path="res://User Interface/HealthBar.png" id="3_688m5"]
+[ext_resource type="Texture2D" uid="uid://c0iqai5hd4n0m" path="res://User Interface/StaminaBar.png" id="4_071jv"]
 
 [node name="PlayerUI" type="CanvasLayer"]
 
@@ -27,17 +27,17 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 value = 100.0
-texture_under = ExtResource("1_s7q5g")
-texture_over = ExtResource("2_0u580")
-texture_progress = ExtResource("3_vh5dh")
+texture_under = ExtResource("1_8isxx")
+texture_over = ExtResource("2_00qt0")
+texture_progress = ExtResource("3_688m5")
 
 [node name="StaminaBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 value = 100.0
-texture_under = ExtResource("1_s7q5g")
-texture_over = ExtResource("2_0u580")
-texture_progress = ExtResource("4_wq4tc")
+texture_under = ExtResource("1_8isxx")
+texture_over = ExtResource("2_00qt0")
+texture_progress = ExtResource("4_071jv")
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

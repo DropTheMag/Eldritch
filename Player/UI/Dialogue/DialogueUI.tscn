@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://ch3cxpbt86vf3"]
 
-[ext_resource type="Script" path="res://Player/UI/Dialog/DialogueButton.gd" id="1_xniqy"]
+[ext_resource type="Script" path="res://Player/UI/Dialogue/DialogueUI.gd" id="1_ncqia"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_ncqia")
 
 [node name="DialogueButton" type="Button" parent="."]
 z_index = 10
@@ -17,8 +18,7 @@ offset_right = 500.0
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 0
-pivot_offset = Vector2(-1, 0)
+pivot_offset = Vector2(500, 16)
 text = "He has a mean look in his eyes..."
-script = ExtResource("1_xniqy")
 
-[connection signal="pressed" from="DialogueButton" to="DialogueButton" method="_on_pressed"]
+[connection signal="pressed" from="DialogueButton" to="." method="_on_pressed"]

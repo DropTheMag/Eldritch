@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0qycynnwe2fx"]
+
+[ext_resource type="Script" path="res://Player/UI/Respawn/RespawnUI.gd" id="1_q83l8"]
+
+[sub_resource type="Animation" id="Animation_628pp"]
+resource_name = "respawn_text_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DeathLabel:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5x0i3"]
+_data = {
+"respawn_text_animation": SubResource("Animation_628pp")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_q83l8")
+
+[node name="DeathLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = -11.5
+offset_right = 49.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(49.5, 11.5)
+text = "You died, lol.
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DeathLabel"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5x0i3")
+}
+
+[node name="RespawnButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -64.0
+offset_right = 94.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Respawn?"
+
+[connection signal="pressed" from="RespawnButton" to="." method="_on_respawn_button_pressed"]
