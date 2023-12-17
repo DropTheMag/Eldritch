@@ -39,7 +39,7 @@ func _process(delta):
 		
 	
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
-	if Input.is_action_just_pressed("ui_e"):
+	if Input.is_action_just_pressed("e"):
 		if dialogue_initiator_collider:
 			if dialogue_initiator_collider.is_in_group("HelperBot"):
 				dialogue_ui.show_random_dialogue(dialogue_initiator_collider.dialogue_sequence)
