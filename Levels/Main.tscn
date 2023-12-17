@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cynd4bs1qfm7s"]
+[gd_scene load_steps=7 format=3 uid="uid://cynd4bs1qfm7s"]
 
 [ext_resource type="TileSet" uid="uid://bocpvgfmrfri3" path="res://Tilemap/Main.tres" id="1_unfew"]
 [ext_resource type="PackedScene" uid="uid://5v7eku1ehhaw" path="res://Player/Player.tscn" id="2_wuddt"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cx4p3dfncv3ij" path="res://Farming System/Farm Objects/FarmObject.tscn" id="4_iad7c"]
 [ext_resource type="PackedScene" uid="uid://ldt8v3fn4e8h" path="res://Traps/GroundSpikes.tscn" id="5_4q3ve"]
 [ext_resource type="PackedScene" uid="uid://bwkc2miga0tjl" path="res://Levels/Level Loader/LoadLevelCollider.tscn" id="6_eu6is"]
-[ext_resource type="PackedScene" uid="uid://c8im46rc754w8" path="res://Levels/TestHouse.tscn" id="7_l66ni"]
 
 [node name="MainNode" type="Node2D"]
 y_sort_enabled = true
