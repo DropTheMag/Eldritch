@@ -145,4 +145,3 @@ position = Vector2(368, 336)
 [node name="LoadLevelCollider" parent="Level" instance=ExtResource("6_eu6is")]
 position = Vector2(880, 104)
 scale = Vector2(1.895, 0.57)
-level_to_load = ExtResource("7_l66ni")

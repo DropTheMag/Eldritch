@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8im46rc754w8"]
+[gd_scene load_steps=3 format=3 uid="uid://c8im46rc754w8"]
 
 [ext_resource type="TileSet" uid="uid://bocpvgfmrfri3" path="res://Tilemap/Main.tres" id="1_50r4j"]
 [ext_resource type="PackedScene" uid="uid://bwkc2miga0tjl" path="res://Levels/Level Loader/LoadLevelCollider.tscn" id="2_ukc2k"]
-[ext_resource type="PackedScene" uid="uid://cynd4bs1qfm7s" path="res://Levels/Main.tscn" id="3_ln6cn"]
 
 [node name="TestHouse" type="Node2D"]
 
@@ -10,7 +9,6 @@
 
 [node name="LoadLevelCollider" parent="Level" instance=ExtResource("2_ukc2k")]
 position = Vector2(128, 144)
-level_to_load = ExtResource("3_ln6cn")
 
 [node name="TileMap" type="TileMap" parent="Level"]
 tile_set = ExtResource("1_50r4j")
