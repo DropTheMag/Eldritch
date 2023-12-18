@@ -30,7 +30,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 
 [node name="Backsplash" type="Sprite2D" parent="BoxContainer"]
-scale = Vector2(1.25584, 1.10801)
+scale = Vector2(1.885, 1.885)
 texture = ExtResource("2_o7co4")
 
 [node name="Logo" type="Sprite2D" parent="BoxContainer"]
