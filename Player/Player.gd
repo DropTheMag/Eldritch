@@ -44,7 +44,7 @@ func _process(delta):
 		testanim.play("respawn_text_animation")
 		
 	
-	# Opens the players inventory
+	# Opens the players inventory, Not functional at the moment
 	GV.inventory_open = false
 	if Input.is_action_just_pressed("i") and GV.inventory_open == false:
 		add_child(full_inventory)
