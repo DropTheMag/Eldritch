@@ -2,7 +2,7 @@ extends Control
 
 # Start game
 func _on_new_game_button_pressed():
-	var first_level = "res://Levels/Main.tscn"
+	var first_level = "res://Levels/Controller/Controller.tscn"
 	get_tree().change_scene_to_file(first_level)
 
 # Opens Settings Menu

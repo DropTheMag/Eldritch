@@ -10,6 +10,10 @@ var health = 100
 @onready var health_bar = player_ui.get_node("MarginContainer/VBoxContainer/HealthBar")
 @onready var stamina_bar = player_ui.get_node("MarginContainer/VBoxContainer/StaminaBar")
 
+# Inventory UI
+@onready var hot_bar = preload("res://Player/UI/Inventory/Hotbar/Hotbar.tscn").instantiate()
+@onready var full_inventory = preload("res://Player/UI/Inventory/FullInventory/FullInventory.tscn").instantiate()
+
 # Preload and instantiate the DialogueUI scene and variables to access and modify their values
 var dialogue_initiator_collider = null
 @onready var dialogue_ui = preload("res://Player/UI/Dialogue/DialogueUI.tscn").instantiate()
@@ -17,10 +21,6 @@ var dialogue_initiator_collider = null
 # Preload and instantiate the Respawn UI and button
 @onready var respawn_ui = preload("res://Player/UI/Respawn/RespawnUI.tscn").instantiate()
 # @onready var respawn_button = respawn_ui.get_node("RespawnButton")
-
-# Needed for checking scene changes
-func player():
-	pass
 
 # Runs when the node is added to the scene, before any other operations complete
 func _ready():
@@ -31,6 +31,8 @@ func _ready():
 	add_child(player_ui)
 	add_child(dialogue_ui)
 	add_child(respawn_ui)
+	add_child(hot_bar)
+
 
 func _process(delta):
 	# Set health bar, monitor player health and perform functions on it.
@@ -42,6 +44,16 @@ func _process(delta):
 		testanim.play("respawn_text_animation")
 		
 	
+	# Opens the players inventory
+	GV.inventory_open = false
+	if Input.is_action_just_pressed("i") and GV.inventory_open == false:
+		add_child(full_inventory)
+		GV.inventory_open = true
+	if Input.is_action_just_pressed("i") and GV.inventory_open == true:
+		remove_child(full_inventory)
+		GV.inventory_open = false
+		
+		
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
 	if Input.is_action_just_pressed("e"):
 		if dialogue_initiator_collider:
@@ -51,9 +63,10 @@ func _process(delta):
 			dialogue_ui.close_dialogue()
 			dialogue_ui.reset_dialogue_timer()
 			
-	# Kill player test
+			
+	# Exit game button
 	if Input.is_action_just_pressed("k"):
-		health = 0
+		get_tree().quit()
 	
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running)
 func _on_dialog_collision_tracker_body_entered(body):

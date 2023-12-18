@@ -18,4 +18,4 @@ extends Node2D
 		#if GV.current_scene == "MainNode":
 			#get_tree().change_scene_to_file("res://Levels/TestHouse.tscn")
 			
-			#GV.finish_scene_change()
+			#V.finish_scene_change()

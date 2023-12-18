@@ -2,27 +2,23 @@
 
 [ext_resource type="TileSet" uid="uid://bocpvgfmrfri3" path="res://Tilemap/Main.tres" id="1_unfew"]
 [ext_resource type="Script" path="res://Levels/Main.gd" id="1_uohav"]
-[ext_resource type="PackedScene" uid="uid://5v7eku1ehhaw" path="res://Player/Player.tscn" id="2_wuddt"]
 [ext_resource type="PackedScene" uid="uid://dltoj1o0kuimw" path="res://HelperBot/HelperBot.tscn" id="3_0koev"]
 [ext_resource type="PackedScene" uid="uid://cx4p3dfncv3ij" path="res://Farming System/Farm Objects/FarmObject.tscn" id="4_iad7c"]
 [ext_resource type="PackedScene" uid="uid://ldt8v3fn4e8h" path="res://Traps/GroundSpikes.tscn" id="5_4q3ve"]
 [ext_resource type="PackedScene" uid="uid://bwkc2miga0tjl" path="res://Levels/Level Loader/LoadLevelCollider.tscn" id="6_eu6is"]
+[ext_resource type="PackedScene" uid="uid://7ows2qvi0rdb" path="res://Levels/Level Loader/SpawnPoint.tscn" id="7_khfe2"]
 
 [node name="MainNode" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_uohav")
 
-[node name="Player" parent="." instance=ExtResource("2_wuddt")]
-position = Vector2(1040, 120)
-
-[node name="Level" type="Node" parent="."]
-
-[node name="LoadLevelCollider" parent="Level" instance=ExtResource("6_eu6is")]
+[node name="LoadLevelCollider" parent="." instance=ExtResource("6_eu6is")]
 position = Vector2(879, 108)
 scale = Vector2(1.535, 0.435)
 level_to_load = "res://Levels/TestHouse.tscn"
+spawnpoint_name = "DoorEntrance"
 
-[node name="Master Tilemap" type="TileMap" parent="Level"]
+[node name="Master Tilemap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 tile_set = ExtResource("1_unfew")
@@ -48,102 +44,105 @@ layer_5/y_sort_enabled = true
 layer_5/z_index = 3
 layer_5/tile_data = PackedInt32Array()
 
-[node name="HelperBot" parent="Level" instance=ExtResource("3_0koev")]
+[node name="HelperBot" parent="." instance=ExtResource("3_0koev")]
 z_index = 3
 y_sort_enabled = true
 position = Vector2(1072, 64)
 
-[node name="FarmTest" type="Node2D" parent="Level"]
+[node name="FarmTest" type="Node2D" parent="."]
 
-[node name="FarmObject" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(80, 72)
 
-[node name="FarmObject2" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject2" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 72)
 
-[node name="FarmObject3" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject3" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(144, 72)
 
-[node name="FarmObject4" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject4" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 104)
 
-[node name="FarmObject5" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject5" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(176, 136)
 
-[node name="FarmObject6" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject6" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(208, 72)
 
-[node name="FarmObject7" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject7" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(208, 168)
 
-[node name="FarmObject8" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject8" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 168)
 
-[node name="FarmObject9" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject9" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(80, 200)
 
-[node name="FarmObject10" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject10" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(144, 200)
 
-[node name="FarmObject11" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject11" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 200)
 
-[node name="FarmObject12" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject12" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(144, 232)
 
-[node name="FarmObject13" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject13" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(176, 232)
 
-[node name="FarmObject14" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject14" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(208, 296)
 
-[node name="FarmObject15" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject15" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(176, 296)
 
-[node name="FarmObject16" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject16" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(144, 296)
 
-[node name="FarmObject17" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject17" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(80, 296)
 
-[node name="FarmObject18" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject18" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 328)
 
-[node name="FarmObject19" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject19" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(144, 328)
 
-[node name="FarmObject20" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject20" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(176, 360)
 
-[node name="FarmObject21" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject21" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(144, 392)
 
-[node name="FarmObject22" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject22" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(80, 392)
 
-[node name="FarmObject23" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject23" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(176, 392)
 
-[node name="FarmObject24" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject24" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(208, 392)
 
-[node name="FarmObject25" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject25" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 264)
 
-[node name="FarmObject26" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject26" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(208, 104)
 
-[node name="FarmObject27" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject27" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(112, 136)
 
-[node name="FarmObject28" parent="Level/FarmTest" instance=ExtResource("4_iad7c")]
+[node name="FarmObject28" parent="FarmTest" instance=ExtResource("4_iad7c")]
 position = Vector2(80, 168)
 
-[node name="GroundSpikes" parent="Level" instance=ExtResource("5_4q3ve")]
+[node name="GroundSpikes" parent="." instance=ExtResource("5_4q3ve")]
 position = Vector2(304, 336)
 
-[node name="GroundSpikes2" parent="Level" instance=ExtResource("5_4q3ve")]
+[node name="GroundSpikes2" parent="." instance=ExtResource("5_4q3ve")]
 position = Vector2(336, 336)
 
-[node name="GroundSpikes3" parent="Level" instance=ExtResource("5_4q3ve")]
+[node name="GroundSpikes3" parent="." instance=ExtResource("5_4q3ve")]
 position = Vector2(368, 336)
+
+[node name="DoorExit" parent="." instance=ExtResource("7_khfe2")]
+position = Vector2(878, 129)

@@ -1,0 +1,228 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc4jq7mcet8fg"]
+
+[ext_resource type="Texture2D" uid="uid://c3dso0kpd6pnv" path="res://Player/UI/Inventory/Hotbar/image.png" id="1_j2sxr"]
+[ext_resource type="Texture2D" uid="uid://cop7ajpyw62o1" path="res://Farming System/TestFarmIcon.png" id="2_vpgwa"]
+
+[node name="HotBar" type="CanvasLayer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -104.0
+offset_right = 61.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.95, 0.95)
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel2"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel2"]
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_vpgwa")
+
+[node name="Panel3" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel3"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel4"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel5" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel5"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel6"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Label" type="Label" parent="HBoxContainer/Panel6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel7" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel7"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel7"]
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_vpgwa")
+
+[node name="Panel8" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel8"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel8"]
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_vpgwa")
+
+[node name="Panel9" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel9"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel9"]
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_vpgwa")
+
+[node name="Panel10" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel10"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel10"]
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_vpgwa")
+
+[node name="Panel11" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer/Panel11"]
+scale = Vector2(3, 3)
+texture = ExtResource("1_j2sxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel11"]
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_vpgwa")

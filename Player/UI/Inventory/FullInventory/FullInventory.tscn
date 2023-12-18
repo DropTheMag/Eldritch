@@ -1,0 +1,815 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn8nar55ijigx"]
+
+[ext_resource type="Texture2D" uid="uid://buc8sbhp3pib4" path="res://Player/UI/Inventory/FullInventory/Inventory.png" id="1_k82te"]
+[ext_resource type="Texture2D" uid="uid://c3dso0kpd6pnv" path="res://Player/UI/Inventory/Hotbar/image.png" id="2_23bkm"]
+
+[node name="FullInventory" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-931, -411)
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+texture = ExtResource("1_k82te")
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -952.0
+offset_top = -432.0
+offset_right = -912.0
+offset_bottom = -392.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 100
+columns = 10
+
+[node name="Panel5" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel5"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel6" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel6"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel7" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel7"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel8" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel8"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel9" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel9"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel10" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel10"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel10"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel11" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel11"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel11"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel12" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel12"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel12"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel13" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel13"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel13"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel14" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel14"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel14"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel15" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel15"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel15"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel16" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel16"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel16"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel17" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel17"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel17"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel18" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel18"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel18"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel19" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel19"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel19"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel20" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel20"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel20"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel21" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel21"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel21"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel22" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel22"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel22"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel23" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel23"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel23"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel24" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel24"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel24"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel25" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel25"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel25"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel26" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel26"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel26"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel27" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel27"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel27"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel28" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel28"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel28"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel29" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel29"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel29"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel30" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel30"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel30"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel31" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel31"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel31"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel32" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel32"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel32"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel33" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel33"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel33"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel34" type="Panel" parent="CenterContainer/Sprite2D/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Sprite2D/GridContainer/Panel34"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_23bkm")
+
+[node name="Label" type="Label" parent="CenterContainer/Sprite2D/GridContainer/Panel34"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
