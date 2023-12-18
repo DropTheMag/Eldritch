@@ -21,7 +21,7 @@ theme_override_constants/margin_right = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 2
 
 [node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
@@ -41,6 +41,6 @@ texture_progress = ExtResource("4_071jv")
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "SHIFT to SPRINT!"
 horizontal_alignment = 1

@@ -18,6 +18,10 @@ var dialogue_initiator_collider = null
 @onready var respawn_ui = preload("res://Player/UI/Respawn/RespawnUI.tscn").instantiate()
 # @onready var respawn_button = respawn_ui.get_node("RespawnButton")
 
+# Needed for checking scene changes
+func player():
+	pass
+
 # Runs when the node is added to the scene, before any other operations complete
 func _ready():
 	# Set player initial health value
