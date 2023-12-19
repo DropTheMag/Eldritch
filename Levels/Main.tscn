@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://cynd4bs1qfm7s"]
+[gd_scene load_steps=7 format=3 uid="uid://cynd4bs1qfm7s"]
 
 [ext_resource type="TileSet" uid="uid://bocpvgfmrfri3" path="res://Tilemap/Main.tres" id="1_unfew"]
-[ext_resource type="Script" path="res://Levels/Main.gd" id="1_uohav"]
 [ext_resource type="PackedScene" uid="uid://dltoj1o0kuimw" path="res://HelperBot/HelperBot.tscn" id="3_0koev"]
 [ext_resource type="PackedScene" uid="uid://cx4p3dfncv3ij" path="res://Farming System/Farm Objects/FarmObject.tscn" id="4_iad7c"]
 [ext_resource type="PackedScene" uid="uid://ldt8v3fn4e8h" path="res://Traps/GroundSpikes.tscn" id="5_4q3ve"]
@@ -10,7 +9,6 @@
 
 [node name="MainNode" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_uohav")
 
 [node name="LoadLevelCollider" parent="." instance=ExtResource("6_eu6is")]
 position = Vector2(879, 108)

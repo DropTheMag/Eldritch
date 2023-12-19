@@ -32,7 +32,8 @@ func _ready():
 	add_child(dialogue_ui)
 	add_child(respawn_ui)
 	add_child(hot_bar)
-
+	full_inventory.visible = false
+	add_child(full_inventory)
 
 func _process(delta):
 	# Set health bar, monitor player health and perform functions on it.
@@ -44,16 +45,10 @@ func _process(delta):
 		testanim.play("respawn_text_animation")
 		
 	
-	# Opens the players inventory, Not functional at the moment
-	GV.inventory_open = false
-	if Input.is_action_just_pressed("i") and GV.inventory_open == false:
-		add_child(full_inventory)
-		GV.inventory_open = true
-	if Input.is_action_just_pressed("i") and GV.inventory_open == true:
-		remove_child(full_inventory)
-		GV.inventory_open = false
-		
-		
+	# Opens the players inventory.
+	if Input.is_action_just_pressed("i"):
+		full_inventory.visible = not full_inventory.visible
+
 	# Check if player presses "e" to advance, randomize, select, or close dialogue
 	if Input.is_action_just_pressed("e"):
 		if dialogue_initiator_collider:
