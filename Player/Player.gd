@@ -32,6 +32,7 @@ func _ready():
 	add_child(dialogue_ui)
 	add_child(respawn_ui)
 	add_child(hot_bar)
+	# Set inventory screen to be hidden before being added to the scene, as it should only be open when the player calls it.
 	full_inventory.visible = false
 	add_child(full_inventory)
 
@@ -59,9 +60,25 @@ func _process(delta):
 			dialogue_ui.reset_dialogue_timer()
 			
 			
-	# Exit game button
+	# Kill button
 	if Input.is_action_just_pressed("k"):
+		health = 0
+	
+	# Exit game button
+	if Input.is_action_just_pressed("q"):
 		get_tree().quit()
+		
+	# Change the window mode of the game between max/windowed. Sets viewport sizes in code to not affect the editor
+	if Input.is_action_just_pressed("f"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MAXIMIZED:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			DisplayServer.window_set_size(Vector2i(1200, 800))
+			var test_pos = Vector2i((DisplayServer.screen_get_size() - DisplayServer.window_get_size()) / 2)
+			DisplayServer.window_set_position(Vector2i(test_pos.x, test_pos.y))
+			#DisplayServer.window_set_position(Vector2i(0,0))
+			print(DisplayServer.window_get_position())
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 	
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running)
 func _on_dialog_collision_tracker_body_entered(body):

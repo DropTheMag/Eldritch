@@ -1,5 +1,9 @@
 extends Control
 
+# Project initialization stuff here...
+func _ready():
+	pass
+
 # Start game
 func _on_new_game_button_pressed():
 	var first_level = "res://Levels/Controller/Controller.tscn"
@@ -10,6 +14,6 @@ func _on_settings_button_pressed():
 	var settings_menu = "res://Menus/SettingsMenu/SettingsMenu.tscn"
 	get_tree().change_scene_to_file(settings_menu)
 	
-	#Quits Game
+# Quits Game
 func _on_quit_game_button_pressed():
 	get_tree().quit()
