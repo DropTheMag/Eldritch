@@ -13,3 +13,4 @@ func _on_respawn_button_pressed():
 	player.health = 100
 	player_controller.position = Vector2(0, 0)
 	player_controller.can_move = true
+	player.get_node("HotBar").visible = true

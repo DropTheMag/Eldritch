@@ -40,6 +40,7 @@ func _process(delta):
 	# Set health bar, monitor player health and perform functions on it.
 	health_bar.value = health
 	if health <=0:
+		hot_bar.visible = false
 		player_controller.can_move = false
 		respawn_ui.visible = true
 		var testanim:AnimationPlayer = respawn_ui.get_node("DeathLabel/DeathLabelScaleAnimation")
