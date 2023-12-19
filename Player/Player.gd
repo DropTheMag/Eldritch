@@ -70,12 +70,12 @@ func _process(delta):
 		
 	# Change the window mode of the game between max/windowed. Sets viewport sizes in code to not affect the editor
 	if Input.is_action_just_pressed("f"):
-		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MAXIMIZED:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-			DisplayServer.window_set_size(Vector2i(1200, 800))
+		if get_window().mode == Window.MODE_MAXIMIZED:
+			get_window().mode = Window.MODE_WINDOWED
+			get_window().size = Vector2i(1200, 800)
 			get_window().move_to_center()
 		else:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+			get_window().mode = Window.MODE_MAXIMIZED
 	
 # Check if player enters dialog initiator, if so, show/set dialog and reset previous timer (if running)
 func _on_dialog_collision_tracker_body_entered(body):
