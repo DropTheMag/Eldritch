@@ -73,10 +73,7 @@ func _process(delta):
 		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MAXIMIZED:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			DisplayServer.window_set_size(Vector2i(1200, 800))
-			var test_pos = Vector2i((DisplayServer.screen_get_size() - DisplayServer.window_get_size()) / 2)
-			DisplayServer.window_set_position(Vector2i(test_pos.x, test_pos.y))
-			#DisplayServer.window_set_position(Vector2i(0,0))
-			print(DisplayServer.window_get_position())
+			get_window().move_to_center()
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
 	
