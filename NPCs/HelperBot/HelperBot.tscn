@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dltoj1o0kuimw"]
 
-[ext_resource type="Script" path="res://HelperBot/HelperBot.gd" id="1_bpm15"]
-[ext_resource type="Texture2D" uid="uid://ddh2ngjd74emw" path="res://HelperBot/HelperBot.png" id="1_v0vdj"]
+[ext_resource type="Script" path="res://NPCs/HelperBot/HelperBot.gd" id="1_bpm15"]
+[ext_resource type="Texture2D" uid="uid://ddh2ngjd74emw" path="res://NPCs/HelperBot/HelperBot.png" id="1_v0vdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2wlt"]
 size = Vector2(26, 24)

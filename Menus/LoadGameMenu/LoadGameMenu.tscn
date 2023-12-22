@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://1myb2kbncmos"]
+[gd_scene load_steps=3 format=3 uid="uid://1myb2kbncmos"]
+
+[ext_resource type="Texture2D" uid="uid://bo6uh4pklrhnx" path="res://Menus/MainMenu/MainMenuBackground.jpg" id="1_6siaf"]
+[ext_resource type="Texture2D" uid="uid://lqyv6vtri1j0" path="res://Menus/MainMenu/EldritchLogoTemp2.png" id="2_hor8r"]
 
 [node name="LoadGameMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +10,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Backsplash" type="Sprite2D" parent="BoxContainer"]
+scale = Vector2(1.885, 1.885)
+texture = ExtResource("1_6siaf")
+
+[node name="Logo" type="Sprite2D" parent="BoxContainer"]
+position = Vector2(0, -23)
+texture = ExtResource("2_hor8r")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(125, 200)

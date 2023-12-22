@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cslccjrochfgc"]
+
+[ext_resource type="Script" path="res://NPCs/AnonymousNPC/AnotherNPC.gd" id="1_a5ra3"]
+[ext_resource type="Texture2D" uid="uid://dl4wsskpft6y" path="res://NPCs/AnonymousNPC/Err0R.png" id="2_squig"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2wlt"]
+size = Vector2(26, 24)
+
+[node name="AnotherNPC" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["HelperBot"]]
+script = ExtResource("1_a5ra3")
+
+[node name="HelperBotSprite" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, -32)
+texture = ExtResource("2_squig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_t2wlt")

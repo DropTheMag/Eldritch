@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddh2ngjd74emw"
-path="res://.godot/imported/HelperBot.png-33d21247d946935b83f9d436d9259f8e.ctex"
+path="res://.godot/imported/HelperBot.png-9503e0d0614081e5b3d2aa1815125141.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HelperBot/HelperBot.png"
-dest_files=["res://.godot/imported/HelperBot.png-33d21247d946935b83f9d436d9259f8e.ctex"]
+source_file="res://NPCs/HelperBot/HelperBot.png"
+dest_files=["res://.godot/imported/HelperBot.png-9503e0d0614081e5b3d2aa1815125141.ctex"]
 
 [params]
 
