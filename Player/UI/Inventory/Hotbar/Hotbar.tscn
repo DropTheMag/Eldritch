@@ -1,22 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc4jq7mcet8fg"]
+[gd_scene load_steps=4 format=3 uid="uid://bc4jq7mcet8fg"]
 
 [ext_resource type="Texture2D" uid="uid://c3dso0kpd6pnv" path="res://Player/UI/Inventory/Hotbar/image.png" id="1_j2sxr"]
 [ext_resource type="Texture2D" uid="uid://cop7ajpyw62o1" path="res://Farming System/TestFarmIcon.png" id="2_vpgwa"]
+[ext_resource type="Texture2D" uid="uid://dl4wsskpft6y" path="res://NPCs/AnonymousNPC/Err0R.png" id="3_gbq6i"]
 
 [node name="HotBar" type="CanvasLayer"]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -104.0
-offset_right = 61.0
-offset_bottom = 5.0
+offset_left = -960.0
+offset_top = -93.0
+offset_right = 1299.0
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.95, 0.95)
-theme_override_constants/separation = 100
+scale = Vector2(0.85, 0.85)
+theme_override_constants/separation = 115
 alignment = 1
 
 [node name="Panel" type="Panel" parent="HBoxContainer"]
@@ -211,8 +214,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_j2sxr")
 
 [node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer/Panel10"]
-scale = Vector2(2.25, 2.25)
-texture = ExtResource("2_vpgwa")
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("3_gbq6i")
 
 [node name="Panel11" type="Panel" parent="HBoxContainer"]
 layout_mode = 2
