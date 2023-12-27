@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://baqfcdd8pkjal"]
+
+[ext_resource type="Texture2D" uid="uid://cc80jsca65so0" path="res://User Interface/BarUnder.png" id="1_amr65"]
+[ext_resource type="Texture2D" uid="uid://da1tvwy1pxqak" path="res://User Interface/BarOver.png" id="2_o0wrn"]
+[ext_resource type="Texture2D" uid="uid://c0iqai5hd4n0m" path="res://User Interface/StaminaBar.png" id="3_mqjbk"]
+
+[sub_resource type="SystemFont" id="SystemFont_vf7gf"]
+
+[node name="SkillsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CombatSkill" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="CombatLabel" type="Label" parent="MarginContainer/VBoxContainer/CombatSkill"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_vf7gf")
+text = "Combat"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/CombatSkill"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_under = ExtResource("1_amr65")
+texture_over = ExtResource("2_o0wrn")
+texture_progress = ExtResource("3_mqjbk")
+
+[node name="FarmingSkill" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CombatLabel" type="Label" parent="MarginContainer/VBoxContainer/FarmingSkill"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_vf7gf")
+text = "Farming"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/FarmingSkill"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_under = ExtResource("1_amr65")
+texture_over = ExtResource("2_o0wrn")
+texture_progress = ExtResource("3_mqjbk")
+
+[node name="ForestrySkill" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CombatLabel" type="Label" parent="MarginContainer/VBoxContainer/ForestrySkill"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_vf7gf")
+text = "Forestry"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/ForestrySkill"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_under = ExtResource("1_amr65")
+texture_over = ExtResource("2_o0wrn")
+texture_progress = ExtResource("3_mqjbk")
+
+[node name="HandlingSkill" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HandlingLabel" type="Label" parent="MarginContainer/VBoxContainer/HandlingSkill"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_vf7gf")
+text = "Handling"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/HandlingSkill"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_under = ExtResource("1_amr65")
+texture_over = ExtResource("2_o0wrn")
+texture_progress = ExtResource("3_mqjbk")
